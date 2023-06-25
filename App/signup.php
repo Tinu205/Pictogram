@@ -14,7 +14,7 @@ include "libs/load.php";
   </header>
 
   <main>
-    <?php load_template("log_in");?>
+    <?php load_template("sign_up");?>
   </main>
 
   <footer class="text-body-secondary py-5">
@@ -23,22 +23,35 @@ include "libs/load.php";
 
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-    .form-signin {
+    .form-signup {
     max-width: 330px;
     padding: 15px;
     }
 
-    .form-signin .form-floating:focus-within {
+    .form-signup .form-floating:focus-within {
     z-index: 2;
     }
-
-    .form-signin input[type="email"] {
+    .form-signup input[name="Name"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     }
+    .form-signup input[name="Phone"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+    .form-signup input[type="email"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
 
-    .form-signin input[type="password"] {
+    .form-signup input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
