@@ -34,7 +34,6 @@ function signup($user,$pass,$email,$phone){
     }
 
     $conn->close();
-    return $result;
-    
+    return $result;  
 }
 ?>
