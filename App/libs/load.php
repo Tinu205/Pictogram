@@ -1,7 +1,6 @@
 <?php
 
-function load_template($name){
-    //print(__FILE__);
-    include __DIR__."../../_templates/$name.php";//or require_once __DIR__. is used to go from current direcotry
+function load_template($name)
+{
+    include $_SERVER['DOCUMENT_ROOT']."/app/_templates/$name.php"; //not consistant.
 }
-?>
