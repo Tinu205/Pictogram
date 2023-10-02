@@ -1,27 +1,41 @@
 <?php
-
-include 'libs/load.php';
-
+  include "libs/load.php";
 ?>
 
 <!doctype html>
-<html lang="en">
-<?load_template('_head');?>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Tinu">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Photogram</title>
+    
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <?php load_template("style");?>
+  </head>
 
-<body>
+  <body>
+    <?php load_template("body_style") ?>
 
-    <?load_template('_header');?>
+    <header data-bs-theme="dark">
+      <?php load_template("header");?>
+    </header>
+
     <main>
-
-        <?load_template('_calltoaction');?>
-
-        <?load_template('_photogram');?>
-
+      <section class="py-5 text-center container">
+        <?php load_template("action");?>
+      </section>
+      <?php load_template("boxes");?>
     </main>
-    <?load_template('_footer');?>
-    <script src="/app/assets/dist/js/bootstrap.bundle.min.js"></script>
 
+    <footer class="text-body-secondary py-5">
+      <?php load_template("footer");?>
+    </footer>
 
-</body>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
+  </body>
 </html>

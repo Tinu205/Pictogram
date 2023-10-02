@@ -1,26 +1,24 @@
 <pre>
 <?php
 include 'libs/load.php';
-
-// $cookie_name = "testscript";
-// $cookie_value = $_SERVER['REQUEST_URI'];
-// setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-// print("_SERVER \n");
+// $cookie_name = "Panda";
+// $cookie_value = "Bamboos";
+// setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); 
+// print("_Server");
 // print_r($_SERVER);
-// print("_GET \n");
+// print("_GET");
 // print_r($_GET);
-// print("_POST \n");
+// print("_Post");
 // print_r($_POST);
-// print("_FILES \n");
+// print("_Files");
 // print_r($_FILES);
-// print("_COOKIES \n");
+// print("Cokkies");
 // print_r($_COOKIE);
-
-if (signup("sibidharan", "password", "sibi@selfmade.ninja", "9999999999")) {
-    echo "Success";
-} else {
-    echo "Fail";
+printf("Here it starts");
+if(signup("Sample001","samplepass","sample01@gmail.com","10293847576")){
+    printf("Success");
+}else{
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 ?>
 </pre>
