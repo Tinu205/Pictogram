@@ -22,7 +22,7 @@ function signup($user,$pass,$email,$phone){
     die("Connection failed: " . $conn->connect_error);
     }
     
-    $sql = "INSERT INTO `Auth` (`username`, `password`, `email`, `phone`, `blocked`, `active`)
+    $sql = "INSERT INTO Auth (username, password, email, phone, blocked, active)
     VALUES ($user, $pass, $email, $phone, '0', '1')";
     $result = false;
     if ($conn->query($sql) === TRUE) {
