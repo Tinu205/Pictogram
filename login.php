@@ -5,6 +5,40 @@
   load_template('_head');
 ?>
   <style>
+    html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 330px;
+        padding: 15px;
+      }
+
+      .form-signin .form-floating:focus-within {
+        z-index: 2;
+      }
+
+      .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -76,43 +110,12 @@
       .bd-mode-toggle {
         z-index: 1500;
       }
-    </style>
-  <body>
-<header data-bs-theme="dark">
-  <div class="collapse text-bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4>About</h4>
-          <p class="text-body-secondary">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4>Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <?php 
-    load_template("_header");
-  ?>
-</header>
-<main>
-  <?php
-    load_template("_calltoaction");
-  ?>
 
+    </style>
+
+  <body class="text-center">    
   <?php
-    load_template("_album");
+    load_template('_login');
   ?>
-</main>
-<?php
-  load_template("_footer");
-?>
-<script src="/Pictogram/assets/dist/js/bootstrap.bundle.min.js"></script>     
 </body>
 </html>
