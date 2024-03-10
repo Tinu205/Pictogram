@@ -1,22 +1,13 @@
 <?php
+    include_once "includes/database.class.php";
+    include_once "includes/user.class.php";
     function load_template($name){
         include $_SERVER['DOCUMENT_ROOT']."/Pictogram/_templates/$name.php";
         // include __DIR__."/../_templates/$name.php";
     }
 
     function sign_up($username, $email, $password) {
-        $servername = "localhost";
-        $username_db = "panda"; // Changed variable name
-        $password_db = "cutepanda"; // Changed variable name
-        $database = "pictogram";
-    
-        // Create connection
-        $conn = new mysqli($servername, $username_db, $password_db, $database);
-    
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        } 
+        $conn = database::getconnection();
     
         // Concatenate user inputs into SQL query string
     $sql = "INSERT INTO `auth` (`username`, `email`, `password`) VALUES ('$username', '$email', '$password')";
@@ -32,7 +23,7 @@
     }    
 
     // Close the connection
-    $conn->close();
+    //$conn->close();
 
     return $result;
 }

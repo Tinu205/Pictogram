@@ -1,13 +1,13 @@
 <?php
   $signup_stat = false;
   if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'])){
-    $no_error = sign_up($_POST['username'],$_POST['mail'],$_POST['password']);
+    $no_error = user::sign_up($_POST['username'],$_POST['mail'],$_POST['password']);
     $signup_stat = true;
   }
 ?>
 <?php
   if($signup_stat){
-    if($no_error){
+    if(!$no_error){
       ?>
       <main class="container">
         <div class="bg-light p-5 rounded mt-3">
