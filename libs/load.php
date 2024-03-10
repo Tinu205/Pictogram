@@ -4,7 +4,7 @@
         // include __DIR__."/../_templates/$name.php";
     }
 
-    function sign_up($username, $password, $email) {
+    function sign_up($username, $email, $password) {
         $servername = "localhost";
         $username_db = "panda"; // Changed variable name
         $password_db = "cutepanda"; // Changed variable name
