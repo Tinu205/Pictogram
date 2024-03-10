@@ -1,7 +1,7 @@
 <main class="form-signin w-100 m-auto">
   <form method="post" action="test.php">
     <img class="mb-4" src="/Pictogram/assets/images/pfp.png" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">Please login</h1>
 
     <div class="form-floating">
       <input name = "username" type="text" class="form-control" id="floatingInputUsername" placeholder="username">
