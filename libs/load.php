@@ -1,6 +1,9 @@
 <?php
     include_once "includes/database.class.php";
     include_once "includes/user.class.php";
+    include_once "includes/session.class.php";
+    
+    Session::start();
     function load_template($name){
         include $_SERVER['DOCUMENT_ROOT']."/Pictogram/_templates/$name.php";
         // include __DIR__."/../_templates/$name.php";
