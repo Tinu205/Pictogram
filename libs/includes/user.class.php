@@ -19,7 +19,7 @@ class user
     }
     public static function login($user,$password)
     {
-$salt);
+
         $query = "SELECT * FROM `auth` WHERE `username` = '$user' LIMIT 50 ";
         $connection = database::getconnection();
         $result = $connection->query($query);
@@ -35,6 +35,12 @@ $salt);
         }else{
             return false;
         }
-    }
+  }
+  public function __construct($username)
+  {
+    $this->conn = database::getconnection();
+    $this->conn->query();
+  }
+
 }
 ?>
