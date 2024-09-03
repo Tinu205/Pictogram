@@ -8,7 +8,7 @@
         include $_SERVER['DOCUMENT_ROOT']."/Pictogram/_templates/$name.php";
         // include __DIR__."/../_templates/$name.php";
     }
-
+/*
     function sign_up($username, $email, $password) {
         $conn = database::getconnection();
     
@@ -30,6 +30,7 @@
 
     return $result;
 }
+*/
 
 ?>
 
