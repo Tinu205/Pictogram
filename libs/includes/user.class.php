@@ -5,7 +5,7 @@ class user
     public static function sign_up($username, $email, $password) 
     {
         $conn = database::getconnection();
-        $password = password_hash($password,PASSWORD_BCRYPT,8); 
+        $password = password_hash($password,PASSWORD_BCRYPT); 
         // Concatenate user inputs into SQL query string
         $sql = "INSERT INTO `auth` (`username`, `email`, `password`) VALUES ('$username', '$email', '$password')";
         $error = false;
@@ -26,6 +26,7 @@ class user
         if($result->num_rows==1)
         {
             $row = $result->fetch_assoc();
+            //echo $row['password'];
             if(password_verify($password,$row['password']))
             {
                 return true;
@@ -40,7 +41,11 @@ class user
   {
     $this->conn = database::getconnection();
     $this->conn->query();
+    $this->username = $username;
+    //Todo write code to fetch username from database is username is not present,throw exception
   }
-
+  public function setBio(){
+    //Write update date command to change bio
+  }
 }
 ?>
