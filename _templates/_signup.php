@@ -4,6 +4,7 @@
     $no_error = user::sign_up($_POST['username'],$_POST['mail'],$_POST['password']);
     $signup_stat = true;
   }
+
 ?>
 <?php
   if($signup_stat){
@@ -12,7 +13,7 @@
       <main class="container">
         <div class="bg-light p-5 rounded mt-3">
             <h1>Signup Success</h1>
-            <p class="lead">Now you can login from <a href="login.php">here</a>.</p>
+            <p class="lead">Now you can login from <a href="login.php">here</a></p>
 
         </div>
       </main>
@@ -22,7 +23,7 @@
         <main class="container">
           <div class="bg-light p-5 rounded mt-3">
               <h1>Signup Fail</h1>
-              <p class="lead">Something went wrong, <?=$error?>
+              <p class="lead">Something went wrong, <?php $error?>
               </p>
           </div>
         </main>
